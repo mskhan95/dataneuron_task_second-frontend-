@@ -3,7 +3,7 @@ import { Heading, Text } from "@chakra-ui/react";
 
 const ShowCount = ({ addCount, updateCount }) => {
   return (
-    <div style={{ width: "45vw" }}>
+    <div style={{ width: "45vw", marginTop: "50px" }}>
       <Heading mb={5} textAlign={"center"}>
         ShowCount
       </Heading>

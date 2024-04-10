@@ -42,24 +42,26 @@ const TablePage = ({ alldata, getOneData, getcount, getalldata }) => {
   };
 
   return (
-    <div style={{ width: "100vw" }}>
+    <div
+      style={{ border: "1px solid gray", borderRadius: "60px", width: "80vw" }}
+    >
       <Heading mb={5} textAlign={"center"}>
         Table Page
       </Heading>
       <div>
         <TableContainer>
-          <Table variant="simple">
+          <Table variant="simple" size="sm">
             <Thead>
               <Tr>
-                <Th>Name</Th>
-                <Th>Edit Button</Th>
+                <Th textAlign={"center"}>Name</Th>
+                <Th textAlign={"center"}>Edit Button</Th>
               </Tr>
             </Thead>
-            <Tbody>
+            <Tbody textAlign={"center"}>
               {alldata?.map((item, index) => {
                 return (
                   <Tr key={index}>
-                    <Td>{item.name}</Td>
+                    <Td textAlign={"center"}>{item.name}</Td>
                     <Button onClick={() => HandleEdit(item._id, item.name)}>
                       Edit
                     </Button>
